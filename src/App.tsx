@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getPopular } from "./api/tmdb";
 import type { Movie } from "./types/movie";
 import MovieCard from "./components/movieCard/movieCards";
-import "./App.module.css";
+import styles from "./App.module.css";
 
 function App() {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -14,9 +14,9 @@ function App() {
   }, []);
   
   return (
-    <main className="container">
+    <main className={styles.container}>
       <h1>인기 영화</h1>
-      <div className="movie-grid">
+      <div className={styles.movieGrid}>
         {movies.map((m) => (
           <MovieCard key={m.id} movie={m} />
         ))}
