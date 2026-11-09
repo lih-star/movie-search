@@ -9,3 +9,10 @@
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 16px;
 }
+
+.back {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  margin-bottom: 16px;
+}

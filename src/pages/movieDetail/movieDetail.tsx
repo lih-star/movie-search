@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { getMovie } from "../api/tmdb";
-import type { MovieDetail as MovieDetailType } from "../types/movie";
+import { getMovie } from "../../api/tmdb";
+import type { MovieDetail as MovieDetailType } from "../../types/movie";
 import styles from "./MovieDetail.module.css";
 
 export default function MovieDetail() {

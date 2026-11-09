@@ -3,13 +3,15 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import App from "./pages/App.tsx";
-import MovieDetail from "./pages/movieDetail.tsx";
+import MovieDetail from "./pages/movieDetail/movieDetail.tsx";
+import SearchPage from "./pages/searchPage/searchPage.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/search" element={<SearchPage/>} />
         <Route path="/movie/:id" element={<MovieDetail />} />
       </Routes>
     </BrowserRouter>
