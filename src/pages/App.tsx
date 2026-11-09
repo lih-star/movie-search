@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { getPopular } from "./api/tmdb";
-import type { Movie } from "./types/movie";
-import MovieCard from "./components/movieCard/movieCards";
+import { getPopular } from "../api/tmdb";
+import type { Movie } from "../types/movie";
+import MovieCard from "../components/movieCard/movieCards";
 import styles from "./App.module.css";
 
 function App() {

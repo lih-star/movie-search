@@ -1,4 +1,4 @@
-import { MovieListSchema } from "../types/movie";
+import { MovieListSchema, MovieDetailSchema } from "../types/movie";
 
 const BASE = "https://api.themoviedb.org/3";
 
@@ -19,5 +19,6 @@ export async function getPopular(page = 1) {
 export const searchMovies = (query: string, page = 1) =>
   request("/search/movie", { query, page: String(page) });
 
-export const getMovie = (id: string) => request(`/movie/${id}`);
+export const getMovie = async (id: string) =>
+  MovieDetailSchema.parse(await request(`/movie/${id}`));
 

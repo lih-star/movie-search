@@ -1,0 +1,77 @@
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.back {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.content {
+  display: flex;
+  gap: 32px;
+}
+
+.poster,
+.noPoster {
+  width: 300px;
+  flex-shrink: 0;
+  aspect-ratio: 2 / 3;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.noPoster {
+  display: grid;
+  place-items: center;
+  background: #333;
+}
+
+.info h1 {
+  margin: 0 0 8px;
+}
+
+.tagline {
+  color: #aaa;
+  font-style: italic;
+}
+
+.meta {
+  color: #ccc;
+}
+
+.genres {
+  display: flex;
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.genres li {
+  padding: 4px 12px;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+.message {
+  padding: 48px;
+  text-align: center;
+}
+
+/* 모바일: 세로로 쌓기 */
+@media (max-width: 700px) {
+  .content {
+    flex-direction: column;
+  }
+  .poster,
+  .noPoster {
+    width: 100%;
+    max-width: 300px;
+  }
+}

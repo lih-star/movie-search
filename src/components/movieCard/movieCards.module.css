@@ -1,3 +1,13 @@
+.movieCardLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.movieCardLink:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 .movieCard {
   border-radius: 8px;
   overflow: hidden;
